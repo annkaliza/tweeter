@@ -50,7 +50,7 @@ const renderTweets = function (tweets) {
 // read one tweet
 
 const createTweetElement = function (tweetData) {
-  const $tweet = $(`
+  let $tweet = $(`
     <article id="view-tweet">
     <div class="content">
     <div class="tweet-header">
@@ -75,7 +75,7 @@ const createTweetElement = function (tweetData) {
 
 const loadTweets = function () {
   let $tweets;
-  $.ajax(" http://localhost:8080/tweets", {
+  $.ajax("/tweets/", {
     method: "GET",
     dataType: "JSON",
   }).then(function (tweets) {
@@ -109,6 +109,7 @@ $(document).ready(function () {
 
         data: $("#tweet-text").serialize(),
       }).then(function () {
+        $('#view-tweet').empty();
         loadTweets();
       });
     }
