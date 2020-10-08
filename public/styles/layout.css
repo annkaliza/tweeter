@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,31 +17,22 @@ html {
  */
 
 body {
+  padding-top: 20px;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro",sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  background-color: #f4f1ec;
-
-}
-@media only screen and (min-width: 768){
 main {
   display: flex;
-  align-items: center;
+  align-content: center;
   justify-content: center;
-  width: 100%;
-  background-color: #f4f1ec;
-}
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
 }

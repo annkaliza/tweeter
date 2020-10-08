@@ -4,6 +4,10 @@
   flex-direction: column;
   justify-content: center;
 }
+.postTweet{
+  display: flex;
+  flex-direction: column;
+}
 
 .new-tweet textarea {
   width: 100%;
@@ -11,6 +15,7 @@
   outline: 0;
   border-bottom: 3px solid #808080;
   margin-bottom: 10px;
+  background-color: inherit;
 }
 
 .new-tweet output {

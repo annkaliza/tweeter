@@ -1,17 +1,26 @@
 nav {
   height: 120px;
-  background-color: #4056a1;
-  color: #ffffff;
-  padding: 1.5em;
+  background-color: #e5a63c;
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
-  top:0;
+  top: 0;
+  color:white;
 }
 
 nav span {
   font-family: "Bungee", sans-serif;
+  padding: 1.5em;
 }
 nav #text {
-  float: right;
-  background-color:  #4056a1;
+  margin: 0em;
+  /* float: right; */
+  padding: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    background-color: #4056a1;
+  }
 }
