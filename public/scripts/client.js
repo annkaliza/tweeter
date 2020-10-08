@@ -42,7 +42,7 @@ const convertTime = function (time) {
 // read all tweets
 
 const renderTweets = function (tweets) {
-  for (let i = 0; i < tweets.length; i++) {
+  for (let i = tweets.length; i >= 0; i--) {
     $("#view-tweet").append(createTweetElement(tweets[i]));
   }
 };
