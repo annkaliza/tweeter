@@ -4,9 +4,10 @@
 
 ## Final Product
 
-!["Register"](./img/register.png)
-!["Short URL VIEW AND EDIT"](./img/shorturl.png)
-!["Home page"](./img/view.png)
+!["Compose tweet"](./img/compose.png)
+!["View tweets"](./img/view.png)
+!["Desktop view"](./img/desktop.png)
+!["Small device view"](./img/mobile.png)
 
 ## Dependencies
 
