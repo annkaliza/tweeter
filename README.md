@@ -4,10 +4,10 @@
 
 ## Final Product
 
-!["Compose tweet"](./img/compose.png)
-!["View tweets"](./img/view.png)
-!["Desktop view"](./img/desktop.png)
-!["Small device view"](./img/mobile.png)
+!["Compose tweet"](./docs/compose.png)
+!["View tweets"](./docs/view.png)
+!["Desktop view"](./docs/desktop.png)
+!["Small device view"](./docs/mobile.png)
 
 ## Dependencies
 
