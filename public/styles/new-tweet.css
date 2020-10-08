@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.postTweet{
+.postTweet {
   display: flex;
   flex-direction: column;
 }
@@ -26,6 +26,6 @@
   background-color: #4056a1;
   color: #ffffff;
 }
-.new-tweet #error{
+.new-tweet #error {
   color: red;
 }

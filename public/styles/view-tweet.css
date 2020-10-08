@@ -1,21 +1,21 @@
-article{
+article {
   border: 3px solid #808080;
-  margin:1.5em;
+  margin: 1.5em;
 }
 article:hover {
   box-shadow: 0 0 20px #808080;
 }
-article #hide{
-  display: none; 
+article #hide {
+  display: none;
 }
-article:hover #hide{
+article:hover #hide {
   display: block !important ;
 }
 #view-tweet {
   width: 100%;
 }
 #view-tweet .content {
- padding-left: 35px;
+  padding-left: 35px;
   width: 90%;
 }
 .tweet-header img {

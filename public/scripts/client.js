@@ -108,7 +108,7 @@ $(document).ready(function () {
         method: "POST",
         data: $("#tweet-text").serialize(),
       }).then(function () {
-        $('#view-tweet').empty();
+        $("#view-tweet").empty();
         loadTweets();
       });
     }
