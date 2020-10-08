@@ -4,21 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function () {
-  // loadTweets();
-  
-  // read all tweets
 
-  const renderTweets = function (tweets) {
-    for (let i = 0; i < tweets.length; i++) {
-      $("#view-tweet").append(createTweetElement(tweets[i]));
-    }
-  };
+   // convert time from millisecond
 
-
-  // convert time from millisecond
-
-  const convertTime = function(time) {
+   const convertTime = function(time) {
     let temp;
     if (time) {
       const timeMin = Math.floor((Date.now() - Number(time)) / 60000);
@@ -52,6 +41,15 @@ $(document).ready(function () {
       return '';
     }
   };
+    
+  // read all tweets
+
+  const renderTweets = function (tweets) {
+    for (let i = 0; i < tweets.length; i++) {
+      $("#view-tweet").append(createTweetElement(tweets[i]));
+    }
+  };
+
 
   // read one tweet
 
@@ -77,6 +75,29 @@ $(document).ready(function () {
    `);
     return $tweet;
   };
+
+
+  // load tweet from the server
+
+  const loadTweets = function () {
+    let $tweets;
+    $.ajax(" http://localhost:8080/tweets", { method: "GET", dataType: 'JSON'}).then(function (
+      tweets
+    ) {
+      renderTweets(tweets);
+    });
+
+    return $tweets;
+  };
+
+
+$(document).ready(function () {
+  loadTweets();
+
+
+
+
+
 
   // send data to server
 
@@ -104,16 +125,4 @@ $(document).ready(function () {
     }
   });
 
-  // load tweet from the server
-
-  const loadTweets = function () {
-    let $tweets;
-    $.ajax(" http://localhost:8080/tweets", { method: "GET" }).then(function (
-      tweets
-    ) {
-      renderTweets(tweets);
-    });
-
-    return $tweets;
-  };
 });
