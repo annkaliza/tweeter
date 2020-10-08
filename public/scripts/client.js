@@ -15,6 +15,44 @@ $(document).ready(function () {
     }
   };
 
+
+  // convert time from millisecond
+
+  const convertTime = function(time) {
+    let temp;
+    if (time) {
+      const timeMin = Math.floor((Date.now() - Number(time)) / 60000);
+      if (timeMin < 1) {
+        return 'now';
+      } else if (timeMin === 1) {
+        return '1 minute ago';
+      } else if ( timeMin > 1 & timeMin < 60) {
+        return `${timeMin} minutes ago`;
+      } else if (timeMin >= 60 & timeMin < 1440) {
+        temp = Math.floor(timeMin / 60);
+        return `${temp} hours ago`;
+      } else {
+        temp = Math.floor(timeMin / 1440);
+        if (temp === 1) {
+          return `one day ago`;
+        } else if (temp < 30 ) {
+          return `${temp} days ago`;
+        } else {
+          temp = Math.floor(temp / 365);
+          if (temp === 1) {
+            return `one year ago`;
+          } else {
+            return `${temp} years ago`;
+            }
+            
+          }
+      }
+  
+    } else {
+      return '';
+    }
+  };
+
   // read one tweet
 
   const createTweetElement = function (tweetData) {
@@ -31,7 +69,7 @@ $(document).ready(function () {
     </div>
     <hr />
     <div class="tweet-footer">
-      <h3>${tweetData["created_at"]}</h3>
+      <h3>${convertTime(tweetData["created_at"])}</h3>
       <h4>logos</h4>
     </div>
   </div>
