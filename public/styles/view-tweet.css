@@ -1,0 +1,38 @@
+article{
+  transition: box-shadow .4s;
+  border: 3px solid #808080;
+  margin-top: 20px;
+}
+article:hover {
+  box-shadow: 0 0 20px #808080;
+}
+article #hide{
+  display: none;
+}
+article:hover #hide{
+  display: block !important ;
+}
+#view-tweet {
+  width: 100%;
+}
+#view-tweet .content {
+ padding-left: 35px;
+  width: 90%;
+}
+.tweet-header img {
+  width: 80px;
+  height: 80px;
+}
+.tweet-header {
+  display: flex;
+}
+.tweet-footer {
+  display: flex;
+}
+
+.tweet-header h4 {
+  margin-left: auto;
+}
+.tweet-footer h4 {
+  margin-left: auto;
+}
