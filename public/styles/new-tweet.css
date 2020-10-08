@@ -1,7 +1,8 @@
 .new-tweet {
-  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 50%;
 }
 
 .new-tweet textarea {

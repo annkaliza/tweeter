@@ -1,30 +1,41 @@
-header {
+.head {
   display: flex;
   height: 400px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #ffff00;
-}
-header img {
-  width: 100px;
-  height: 100px;
   margin-top: 100px;
 }
+.head img {
+  background-color: #ffff00;
+}
 
-@media only screen and (min-width: 1024){
-  header {
+@media only screen and (min-width: 1024) {
+  #allContainer {
+    margin: 2em;
+    margin-top: 5em;
     display: flex;
-    height: 200px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #ffff00;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  header img {
-    width: 50px;
-    height: 50px;
-    margin-top: 50px;
+  .head {
+    margin: 2em;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    width: 30%;
+    height: 350px;
   }
-  
+  .head img {
+    background-color: transparent;
+    width: 200px;
+  }
+
+  .comtainer {
+    width: 60%;
+  }
+  main {
+    margin: 1em;
+  }
 }
